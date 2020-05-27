@@ -6,6 +6,7 @@ module.exports = {
     author: `Joao Victor Farias`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -35,6 +36,13 @@ module.exports = {
             cache: true,
           },
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto:400,500`],
+        display: 'swap',
       },
     },
     `gatsby-transformer-sharp`,
