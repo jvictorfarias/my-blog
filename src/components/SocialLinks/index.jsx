@@ -48,7 +48,7 @@ const SocialLinks = () => {
                 rel="noopener noreferrer"
               >
                 <IconContainer>
-                  <Icon size={22} />
+                  <Icon size={24} />
                 </IconContainer>
               </SocialLink>
             </SocialLinkItem>
