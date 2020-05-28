@@ -6,7 +6,6 @@ export const Container = styled.section`
   color: #f8f8f2;
   display: flex;
   flex-direction: column;
-  background: #282a36;
 `;
 
 export const ProfileLink = styled(Link)`

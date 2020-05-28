@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Profile from '../components/Profile';
+import Sidebar from '../components/Sidebar';
 
 import GlobalStyles from '../styles/global';
 
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   return (
     <Container>
       <GlobalStyles />
-      <Profile />
+      <Sidebar />
       <Main>{children}</Main>
     </Container>
   );
