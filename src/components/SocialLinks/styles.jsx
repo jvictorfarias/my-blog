@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
 
 export const Container = styled.nav`
   margin: 2rem auto;
@@ -21,7 +20,7 @@ export const SocialLink = styled.a`
   transition: color 0.5s;
 
   &:hover {
-    color: ${shade(0.2, '#8be9fd')};
+    color: #ff79c6;
   }
 `;
 
@@ -30,11 +29,9 @@ export const IconContainer = styled.div`
   width: 30px;
   height: 30px;
 
-  svg {
-    transition: fill 0.5s;
-
-    &:hover {
-      fill: #50fa7b;
+  &:hover {
+    svg {
+      fill: #8be9fd;
     }
   }
 `;

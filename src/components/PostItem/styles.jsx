@@ -3,13 +3,13 @@ import { Link } from 'gatsby';
 import { shade } from 'polished';
 
 export const Container = styled(Link)`
-  color: #ff79c6;
+  color: #f8f8f2;
   display: flex;
   text-decoration: none;
   transition: color 0.5s;
 
   &:hover {
-    color: ${shade(0.2, '#ff79c6')};
+    color: ${shade(0.2, '#50fa7b')};
   }
 `;
 
@@ -43,6 +43,7 @@ export const PostItemInfo = styled.div`
 `;
 
 export const PostItemDate = styled.time`
+  color: #ff79c6;
   font-size: 0.9rem;
 `;
 
