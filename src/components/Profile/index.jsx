@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { useStaticQuery, graphql } from 'gatsby'
-import Avatar from '../Avatar'
+import { useStaticQuery, graphql } from 'gatsby';
+import Avatar from '../Avatar';
 
 const Profile = () => {
   const {
@@ -19,7 +19,7 @@ const Profile = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div>
@@ -29,7 +29,7 @@ const Profile = () => {
       <span>{position}</span>
       <p>{description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

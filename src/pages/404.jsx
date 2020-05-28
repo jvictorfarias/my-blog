@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../Layout'
-import SEO from '../components/seo'
+import Layout from '../Layout';
+import SEO from '../components/seo';
 
 const NotFoundPage = () => (
   <Layout>
@@ -9,6 +9,6 @@ const NotFoundPage = () => (
     <h1>Not Found</h1>
     <p>Ops... cannot read property lenght of undefined.</p>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

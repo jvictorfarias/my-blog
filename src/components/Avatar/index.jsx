@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from 'gatsby';
+import { ImageContainer } from './styles';
 
 const Avatar = () => {
   const { avatarImage } = useStaticQuery(
@@ -16,14 +16,14 @@ const Avatar = () => {
         }
       }
     `,
-  )
+  );
 
   return (
-    <Img
+    <ImageContainer
       fluid={avatarImage.childImageSharp.fluid}
       style={{ width: 60, height: 60 }}
     />
-  )
-}
+  );
+};
 
-export default Avatar
+export default Avatar;
