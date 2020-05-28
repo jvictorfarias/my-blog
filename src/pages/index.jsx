@@ -23,30 +23,6 @@ const IndexPage = () => (
       title="Reagindo ao react"
       description="Um curso que introduz de forma breve os benefícios do react"
     />
-    <PostItem
-      slug="/about"
-      category="js"
-      date="30 de abril de 2020"
-      timeToRead="4"
-      title="Reagindo ao react"
-      description="Um curso que introduz de forma breve os benefícios do react"
-    />
-    <PostItem
-      slug="/about"
-      category="js"
-      date="30 de abril de 2020"
-      timeToRead="4"
-      title="Reagindo ao react"
-      description="Um curso que introduz de forma breve os benefícios do react"
-    />
-    <PostItem
-      slug="/about"
-      category="js"
-      date="30 de abril de 2020"
-      timeToRead="4"
-      title="Reagindo ao react"
-      description="Um curso que introduz de forma breve os benefícios do react"
-    />
   </Layout>
 );
 

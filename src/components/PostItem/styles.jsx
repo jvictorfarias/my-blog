@@ -7,7 +7,6 @@ export const Container = styled(Link)`
   display: flex;
   text-decoration: none;
   transition: color 0.5s;
-  flex-direction: column;
 
   &:hover {
     color: ${shade(0.2, '#ff79c6')};
