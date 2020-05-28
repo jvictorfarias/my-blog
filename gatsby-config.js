@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto:400,500`],
+        fonts: [`Roboto:300,400,500`],
         display: 'swap',
       },
     },
@@ -63,4 +63,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

@@ -18,12 +18,7 @@ const Avatar = () => {
     `,
   );
 
-  return (
-    <ImageContainer
-      fluid={avatarImage.childImageSharp.fluid}
-      style={{ width: 60, height: 60 }}
-    />
-  );
+  return <ImageContainer fluid={avatarImage.childImageSharp.fluid} />;
 };
 
 export default Avatar;
