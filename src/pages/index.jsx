@@ -1,14 +1,52 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
 import Layout from '../Layout';
 import SEO from '../components/seo';
+import PostItem from '../components/PostItem';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Home</h1>
-    <Link to="/about">About</Link>
+    <PostItem
+      slug="/about"
+      category="js"
+      date="30 de abril de 2020"
+      timeToRead="4"
+      title="Reagindo ao react"
+      description="Um curso que introduz de forma breve os benefícios do react"
+    />
+    <PostItem
+      slug="/about"
+      category="js"
+      date="30 de abril de 2020"
+      timeToRead="4"
+      title="Reagindo ao react"
+      description="Um curso que introduz de forma breve os benefícios do react"
+    />
+    <PostItem
+      slug="/about"
+      category="js"
+      date="30 de abril de 2020"
+      timeToRead="4"
+      title="Reagindo ao react"
+      description="Um curso que introduz de forma breve os benefícios do react"
+    />
+    <PostItem
+      slug="/about"
+      category="js"
+      date="30 de abril de 2020"
+      timeToRead="4"
+      title="Reagindo ao react"
+      description="Um curso que introduz de forma breve os benefícios do react"
+    />
+    <PostItem
+      slug="/about"
+      category="js"
+      date="30 de abril de 2020"
+      timeToRead="4"
+      title="Reagindo ao react"
+      description="Um curso que introduz de forma breve os benefícios do react"
+    />
   </Layout>
 );
 
