@@ -28,10 +28,4 @@ export const IconContainer = styled.div`
   fill: #8be9fd;
   width: 30px;
   height: 30px;
-
-  &:hover {
-    svg {
-      fill: #8be9fd;
-    }
-  }
 `;
