@@ -34,4 +34,18 @@ export default createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+
+  ::-webkit-scrollbar {
+    width: 0;
+    background-color: #282a36;
+}
+ 
+::-webkit-scrollbar-track {
+
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
 `;

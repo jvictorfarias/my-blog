@@ -28,7 +28,7 @@ export const query = graphql`
 export default BlogPost;
 
 BlogPost.propTypes = {
-  data: PropTypes.object.shape({
+  data: PropTypes.shape({
     markdownRemark: PropTypes.object.isRequired,
     html: PropTypes.string.isRequired,
   }).isRequired,

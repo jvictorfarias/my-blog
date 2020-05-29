@@ -49,7 +49,7 @@ export const PostItemDate = styled.time`
 
 export const PostItemTitle = styled.h1`
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0.2rem 0 0.5rem;
 `;
 
