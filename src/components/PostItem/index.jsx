@@ -20,7 +20,7 @@ const PostItem = ({
   title,
   description,
 }) => (
-  <Container to={`/${slug}`}>
+  <Container to={slug}>
     <PostItemContainer>
       <PostItemTag background={background}>{category}</PostItemTag>
       <PostItemInfo>
