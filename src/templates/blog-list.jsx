@@ -81,7 +81,6 @@ export default BlogList;
 BlogList.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.object.isRequired,
-    html: PropTypes.string.isRequired,
   }).isRequired,
   pageContext: PropTypes.shape({
     currentPage: PropTypes.number.isRequired,
