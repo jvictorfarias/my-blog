@@ -25,10 +25,18 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return graphql(`
-    {
-      allMarkdownRemark {
+    query PostMetadata {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
+            frontmatter {
+              title
+              category
+              background
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+              description
+            }
+            timeToRead
             fields {
               slug
             }
@@ -37,7 +45,8 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    result.data.allMarkdownRemark.edges.forEach(
+    const posts = result.data.allMarkdownRemark.edges;
+    posts.forEach(
       ({
         node: {
           fields: { slug },
@@ -49,6 +58,23 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug,
           },
+        });
+
+        // Creating pagination
+        const postsPerPage = 6;
+        const numPages = Math.ceil(posts.length / postsPerPage);
+
+        Array.from({ length: numPages }).forEach((_, index) => {
+          createPage({
+            path: index === 0 ? `/` : `/page/${index + 1}`,
+            component: path.resolve('./src/templates/blog-list.jsx'),
+            context: {
+              limit: postsPerPage,
+              skip: postsPerPage * index,
+              numPages,
+              currentPage: index + 1,
+            },
+          });
         });
       },
     );
