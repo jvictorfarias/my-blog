@@ -30,7 +30,7 @@ const Profile = () => {
 
   return (
     <Container>
-      <ProfileLink>
+      <ProfileLink to="/about">
         <Avatar />
         <ProfileAuthor>
           {author}
