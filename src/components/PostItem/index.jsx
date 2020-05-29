@@ -14,7 +14,7 @@ import {
 const PostItem = ({
   slug,
   category,
-  background = '#ffb86c',
+  background,
   date,
   timeToRead,
   title,
@@ -25,7 +25,7 @@ const PostItem = ({
       <PostItemTag background={background}>{category}</PostItemTag>
       <PostItemInfo>
         <PostItemDate>
-          {date} - {timeToRead} min de leitura
+          {date} • {timeToRead} min de leitura
         </PostItemDate>
         <PostItemTitle>{title}</PostItemTitle>
         <PostItemDescription>{description}</PostItemDescription>
