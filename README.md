@@ -44,6 +44,7 @@ O projeto foi feito com as seguintes tecnologias:
 
 - [GatsbyJS](https://www.gatsbyjs.org/)
 - [ReactJS](https://pt-br.reactjs.org/)
+- [GraphQL](https://graphql.org/)
 - [Styled-Components](https://styled-components.com/)
   {...}
 
