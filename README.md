@@ -8,7 +8,7 @@
 
 [![The MIT License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](http://github.com/jvictorfarias/my-blog/LICENSE.md)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jvictorfarias/my-blog?color=green&style=flat-square)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/30e0ef7a3c2146498723e53c9fcaeda7)](https://www.codacy.com/manual/jvictorfarias/my-blog_2?utm_source=github.com&utm_medium=referral&utm_content=jvictorfarias/my-blog&utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a03a84b1f0034fe28b676f2a0c3fcfd6)](https://www.codacy.com/manual/jvictorfarias/my-blog?utm_source=github.com&utm_medium=referral&utm_content=jvictorfarias/my-blog&utm_campaign=Badge_Grade)
 ![GitHub top language](https://img.shields.io/github/languages/top/jvictorfarias/my-blog?style=flat-square)
 
 <p align="center" >
