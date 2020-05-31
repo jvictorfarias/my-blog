@@ -7,7 +7,7 @@ export const Container = styled.div`
   border-top: 1px solid #8be9fd;
   background: #44475a;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 `;
 
 export const RecommendedLink = styled(Link)`
@@ -26,7 +26,7 @@ export const RecommendedLink = styled(Link)`
 
   &.previous {
     border-right: 1px solid #8be9fd;
-    justify-content: flex-start;
+
     svg {
       margin-right: 0.3rem;
     }
@@ -34,7 +34,6 @@ export const RecommendedLink = styled(Link)`
 
   &.next {
     justify-content: flex-end;
-    margin-right: 0.3rem;
 
     svg {
       margin-left: 0.3rem;

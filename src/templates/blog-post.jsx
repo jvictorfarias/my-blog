@@ -6,6 +6,7 @@ import Layout from '../Layout';
 import SEO from '../components/seo';
 
 import RecommendedPosts from '../components/RecommendedPosts';
+import Comments from '../components/Comments';
 
 import {
   PostHeader,
@@ -33,6 +34,7 @@ const BlogPost = ({ data, pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </MainContent>
       <RecommendedPosts nextPost={nextPost} previousPost={previousPost} />
+      <Comments url={post.fields.slug} title={post.frontmatter.title} />
     </Layout>
   );
 };
@@ -40,6 +42,9 @@ const BlogPost = ({ data, pageContext }) => {
 export const query = graphql`
   query Post($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       frontmatter {
         title
         description
