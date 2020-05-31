@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return graphql(`
-    query PostMetadata {
+    query PostMetadataOrderByDateWithNextAndPreviousPages {
       allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
@@ -41,6 +41,22 @@ exports.createPages = ({ graphql, actions }) => {
               slug
             }
           }
+          next {
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
+          }
+          previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
         }
       }
     }
@@ -51,12 +67,16 @@ exports.createPages = ({ graphql, actions }) => {
         node: {
           fields: { slug },
         },
+        next,
+        previous,
       }) => {
         createPage({
           path: slug,
           component: path.resolve('./src/templates/blog-post.jsx'),
           context: {
             slug,
+            previousPost: previous,
+            nextPost: next,
           },
         });
       },

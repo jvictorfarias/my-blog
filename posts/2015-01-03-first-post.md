@@ -9,7 +9,7 @@ background: '#7aab13'
 
 # Isto baculum frustra maiora
 
-## Cipe manu herba manentem caper
+# Cipe manu herba manentem caper
 
 ![Code](/assets/img/code.png)
 

@@ -5,6 +5,8 @@ import { graphql } from 'gatsby';
 import Layout from '../Layout';
 import SEO from '../components/seo';
 
+import RecommendedPosts from '../components/RecommendedPosts';
+
 import {
   PostHeader,
   PostTitle,
@@ -13,8 +15,9 @@ import {
   MainContent,
 } from '../components/Post/styles';
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark;
+  const { nextPost, previousPost } = pageContext;
 
   return (
     <Layout>
@@ -29,6 +32,7 @@ const BlogPost = ({ data }) => {
       <MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </MainContent>
+      <RecommendedPosts nextPost={nextPost} previousPost={previousPost} />
     </Layout>
   );
 };
@@ -53,4 +57,15 @@ BlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object.isRequired,
   }).isRequired,
+  pageContext: PropTypes.shape({
+    nextPost: PropTypes.string,
+    previousPost: PropTypes.string,
+  }),
+};
+
+BlogPost.defaultProps = {
+  pageContext: PropTypes.shape({
+    nextPost: null,
+    previousPost: null,
+  }),
 };
