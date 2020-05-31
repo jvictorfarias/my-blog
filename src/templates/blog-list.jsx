@@ -7,6 +7,32 @@ import SEO from '../components/seo';
 import PostItem from '../components/PostItem';
 import Pagination from '../components/Pagination';
 
+export const query = graphql`
+  query PostList($skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            category
+            background
+            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+            description
+          }
+          timeToRead
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;
+
 const BlogList = ({ data, pageContext }) => {
   const postList = data.allMarkdownRemark.edges;
   const { currentPage, numPages } = pageContext;
@@ -49,32 +75,6 @@ const BlogList = ({ data, pageContext }) => {
     </Layout>
   );
 };
-
-export const query = graphql`
-  query PostList($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
-      sort: { fields: frontmatter___date, order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            category
-            background
-            date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-            description
-          }
-          timeToRead
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`;
 
 export default BlogList;
 

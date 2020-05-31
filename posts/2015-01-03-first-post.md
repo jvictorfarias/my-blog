@@ -11,6 +11,8 @@ background: '#7aab13'
 
 ## Cipe manu herba manentem caper
 
+![Code](/assets/img/code.png)
+
 Lorem markdownum partibus **carina** vultus: potuit victoris, vos Emathiique
 stare te ignarum vertice saecula. Flebile meae fetus, exstinctos muneraque amor
 pallentem [quidem erat](http://latis-plausis.com/) canis stagnum campos

@@ -59,24 +59,24 @@ exports.createPages = ({ graphql, actions }) => {
             slug,
           },
         });
-
-        // Creating pagination
-        const postsPerPage = 6;
-        const numPages = Math.ceil(posts.length / postsPerPage);
-
-        Array.from({ length: numPages }).forEach((_, index) => {
-          createPage({
-            path: index === 0 ? `/` : `/page/${index + 1}`,
-            component: path.resolve('./src/templates/blog-list.jsx'),
-            context: {
-              limit: postsPerPage,
-              skip: postsPerPage * index,
-              numPages,
-              currentPage: index + 1,
-            },
-          });
-        });
       },
     );
+
+    // Creating pagination
+    const postsPerPage = 6;
+    const numPages = Math.ceil(posts.length / postsPerPage);
+
+    Array.from({ length: numPages }).forEach((_, index) => {
+      createPage({
+        path: index === 0 ? `/` : `/page/${index + 1}`,
+        component: path.resolve('./src/templates/blog-list.jsx'),
+        context: {
+          limit: postsPerPage,
+          skip: postsPerPage * index,
+          numPages,
+          currentPage: index + 1,
+        },
+      });
+    });
   });
 };
